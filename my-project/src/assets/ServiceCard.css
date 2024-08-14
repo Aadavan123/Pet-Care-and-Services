@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.service-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid #ff5a5f; /* Add a border at the bottom of the image */
+}
+
+.service-details {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.service-name {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.service-caretaker,
+.service-cost {
+  font-size: 18px;
+  color: #777;
+}
+
+.adopt-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-button:hover {
+  background-color: #e94e4f;
+}

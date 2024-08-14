@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.pet-card {
+  background-color: #fffbf2;
+  border-radius: 15px;
+  padding: 10px; /* Outer padding for double border effect */
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 19px;
+}
+
+.pet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ff9f43; /* Inner border */
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.pet-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.pet-image-container {
+  height: 200px;
+  background-color: #fff5e6;
+  border-radius: 12px;
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; /* Spacing between image and details */
+}
+
+.pet-image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pet-image-container:hover .pet-image {
+  transform: scale(1.1);
+}
+
+.pet-details {
+  text-align: center;
+}
+
+.pet-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #ff6348;
+  margin-bottom: 10px;
+}
+
+.pet-behaviour, .pet-type, .pet-price {
+  margin: 8px 0;
+  color: #333;
+}
+
+.adopt-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #ff9f43;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.adopt-button:hover {
+  background-color: #ff6348;
+  transform: scale(1.1);
+}

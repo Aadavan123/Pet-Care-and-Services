@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px; /* Outer padding for double border effect */
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #00a8ff; /* Inner border */
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border: 3px solid #4b6584; /* Border around the image */
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+.product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #4b6584;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #20bf6b;
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: #00a8ff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: #4b6584;
+  transform: scale(1.1);
+}
